@@ -6,15 +6,6 @@ import './Table.scss';
 const Table = props => {
   return (
     <table className="shadow">
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Name</th>
-          <th>Password</th>
-          <th>Edit</th>
-          <th>Delete</th>
-        </tr>
-      </thead>
       <tbody>
         {props.users.map((user, index) => {
           let { id, name, pass } = user;
@@ -31,7 +22,7 @@ const Table = props => {
               data-key={id} 
               className={rowIsBeingEditied ? 'selected-row':''} >
                 
-              <td>{id}</td><td>{name}</td><td>{pass}</td>
+              <td>{name}</td><td>{pass}</td>
               <td>
                 <EditButton 
                   showForm={props.showForm} 

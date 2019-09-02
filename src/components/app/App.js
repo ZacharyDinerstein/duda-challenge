@@ -21,38 +21,38 @@ class App extends React.Component {
       showForm: false
     };
   }
-  
-  
+
+
   handleDeleteRow = (id) => {
     let newUsersArr = this.state.users.filter(user => user.id !== id);
-    
+
     this.setState({
       users: newUsersArr
     });
   }
-  
+
   handleEditRow = (id) => {
     this.setState({
       showForm: !this.state.showForm,
       userIdToEdit: id
     })
   }
-  
-  
+
+
   /* Handles both New User and Edit User Form input changes */
   handleFormInput = (formType, e) => {
     let stateKey = [e.target.dataset.state_key_to_update];
-    
+
     if (formType === formStates.EDIT_STATE) {
       let { userIdToEdit, users } = this.state,
-      newUsersArr = [...users],
-      userToEdit = users.findIndex(item => item.id === userIdToEdit),
-      userObjectKeyToEdit = e.target.dataset.user_object_key_to_edit;
-      
+        newUsersArr = [...users],
+        userToEdit = users.findIndex(item => item.id === userIdToEdit),
+        userObjectKeyToEdit = e.target.dataset.user_object_key_to_edit;
+
       newUsersArr[userToEdit][userObjectKeyToEdit] = e.target.value;
       this.setState({ users: newUsersArr });
     }
-    
+
     this.setState({
       [stateKey]: e.target.value
     })
@@ -109,25 +109,30 @@ class App extends React.Component {
     return (
       <div className="container-fluid">
         <div className="row">
-          <div className="col-lg-8">
-            <Table
-              users={this.state.users}
-              showForm={this.state.showForm}
-              userIdToEdit={this.state.userIdToEdit}
-              handleEditRow={(id) => this.handleEditRow(id)}
-              handleDeleteRow={(id) => this.handleDeleteRow(id)} />
+          <div className="col-xs-12 title-container">
+            <h1>User Reviews</h1>
           </div>
+        </div>
+        <div className="row">
           <div className="col-lg-4">
             <div className="row">
               <div className="col-lg-12">
-                <FormCreateUser 
+                <FormCreateUser
                   formType='create-user'
                   handleFormInput={this.handleFormInput}
                   handleFormSubmit={(formType, stateNameKeyToUpdate, statePassKeyToUpdate, e) => this.handleFormSubmit(formType, stateNameKeyToUpdate, statePassKeyToUpdate, e)}
                   newUserName={this.state.newUserName}
                   newUserPass={this.state.newUserPass} />
               </div>
-              <div className="col-lg-12">                
+              <div className="col-lg-8">
+                <Table
+                  users={this.state.users}
+                  showForm={this.state.showForm}
+                  userIdToEdit={this.state.userIdToEdit}
+                  handleEditRow={(id) => this.handleEditRow(id)}
+                  handleDeleteRow={(id) => this.handleDeleteRow(id)} />
+              </div>
+              <div className="col-lg-12">
                 <FormEditUser
                   formType='edit-user'
                   handleFormInput={(formType, e) => this.handleFormInput(formType, e)}

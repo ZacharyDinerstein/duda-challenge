@@ -5,8 +5,8 @@ import SubmitButton from '../button/SubmitButton.js';
 const FormCreateUser = props => {
     let { formType, newUserName, newUserPass } = props,
         formHeading = 'Create New User',
-        placeholderName = 'Arya Stark',
-        placeholderPass = 'Not Today',
+        placeholderName = 'Your name',
+        placeholderComment = 'Your comment',
         thisStateNameKeyWillUpdateOnChange = 'newUserName',
         thisStatePassKeyWillUpdateOnChange = 'newUserPass',
         nameValueToUpdateInState = newUserName,
@@ -18,10 +18,7 @@ const FormCreateUser = props => {
     return (
         <div className="form-wrapper shadow">
             <form onSubmit={formSubmitMedhod}>
-                <h1>{formHeading}</h1>
-
                 <div className="form-group">
-                    <label htmlFor="">Name</label>
                     <input
                         type="text"
                         className="form-control"
@@ -33,11 +30,10 @@ const FormCreateUser = props => {
                 </div>
 
                 <div className="form-group">
-                    <label htmlFor="Password">Password</label>
                     <input
                         type="text"
                         className="form-control"
-                        placeholder={placeholderPass}
+                        placeholder={placeholderComment}
                         onChange={inputOnChangeMethod}
                         value={passValueToUpdateInState}
                         data-state_key_to_update={thisStatePassKeyWillUpdateOnChange}
