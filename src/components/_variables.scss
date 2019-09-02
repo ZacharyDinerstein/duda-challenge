@@ -1,0 +1,34 @@
+/*** VARIABLES ***/
+
+
+/*COLORS*/
+$white: #fefefe;
+$off-white: #f2f1f2;
+$background-off-white: #edebeb;
+$black: #111111c9;
+$gray-text: rgba(17, 17, 17, .5);
+$light-gray-text-2: #1111114a;
+$light-gray-text-5: #11111154;
+$gray-background: #edecec70;
+$light-gray: #f2f2f2;
+$shadow-color: hsla(0, 5%, 93%, .05);
+$brand-purple: #6c7ae0;
+$delete-red: hsla(359, 64%, 53%, 1);
+$delete-red-hover: hsla(359, 64%, 43%, 1);
+$selected-row: hsla(233, 43%, 93%, 1);
+
+
+/*FONTS*/
+$font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+
+$font-code:	source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+
+// PADDING
+$table-padding: 19px 40px;
+$form-padding: 1em 2em 2em 2em;
+
+
+/*SHADOWS*/
+$shadow: 0px 2px 3px 0px $shadow-color;

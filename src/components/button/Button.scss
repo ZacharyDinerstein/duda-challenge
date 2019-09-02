@@ -1,0 +1,43 @@
+@import "../_variables.scss";
+
+button {
+    border-radius: .28rem;
+    padding: 0.35rem .7rem;
+    color: #fff;
+    background-color: #17a2b8;
+
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn--delete {
+    background-color: $delete-red;
+    border-color: $delete-red;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+    &:hover, &:disabled {
+        background-color: $delete-red;
+        border-color: $delete-red;
+    }
+    &:hover {
+        background-color: $delete-red-hover;
+        border-color: $delete-red-hover;
+    }
+}
+
+.btn:disabled {
+    opacity: .5;    
+}

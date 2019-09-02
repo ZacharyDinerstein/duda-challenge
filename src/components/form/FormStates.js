@@ -1,0 +1,1 @@
+export const formStates = { EDIT_STATE: 'edit-user', CREATE_STATE: 'create-user'};
