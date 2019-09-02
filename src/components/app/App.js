@@ -114,8 +114,17 @@ class App extends React.Component {
           </div>
         </div>
         <div className="row">
-          <div className="col-lg-4">
+          <div className="col-lg-4 col-md-2"></div>
+          <div className="col-lg-4 col-md-8 col-12">
             <div className="row">
+              <div className="col-lg-12 posts">
+                <Table
+                  users={this.state.users}
+                  showForm={this.state.showForm}
+                  userIdToEdit={this.state.userIdToEdit}
+                  handleEditRow={(id) => this.handleEditRow(id)}
+                  handleDeleteRow={(id) => this.handleDeleteRow(id)} />
+              </div>
               <div className="col-lg-12">
                 <FormCreateUser
                   formType='create-user'
@@ -123,14 +132,6 @@ class App extends React.Component {
                   handleFormSubmit={(formType, stateNameKeyToUpdate, statePassKeyToUpdate, e) => this.handleFormSubmit(formType, stateNameKeyToUpdate, statePassKeyToUpdate, e)}
                   newUserName={this.state.newUserName}
                   newUserPass={this.state.newUserPass} />
-              </div>
-              <div className="col-lg-8">
-                <Table
-                  users={this.state.users}
-                  showForm={this.state.showForm}
-                  userIdToEdit={this.state.userIdToEdit}
-                  handleEditRow={(id) => this.handleEditRow(id)}
-                  handleDeleteRow={(id) => this.handleDeleteRow(id)} />
               </div>
               <div className="col-lg-12">
                 <FormEditUser

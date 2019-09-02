@@ -39,7 +39,7 @@ const FormCreateUser = props => {
                         data-state_key_to_update={thisStatePassKeyWillUpdateOnChange}
                         data-user_object_key_to_edit='pass' />
                 </div>
-                <SubmitButton />
+                <SubmitButton text="Add"/>
             </form>
         </div>
     );

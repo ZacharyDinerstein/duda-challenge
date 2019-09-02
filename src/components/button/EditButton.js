@@ -3,12 +3,11 @@ import './Button.scss';
 
 const EditButton = props => {
     return (
-        <button
+        <i 
+            className="fas fa-pencil-alt"
             onClick={props.handleEditRow}
-            className="btn btn-info btn-lg"
-            disabled={props.showForm} >
-            Edit
-        </button>
+            disabled={props.showForm}
+        ></i>
     )
 }
 

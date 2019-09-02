@@ -1,25 +1,24 @@
 @import "../_variables.scss";
 
-table {
+.post {
     width: 100%;
     border-radius: 10px;
     overflow: hidden;
-    text-align: center;
     background-color: $white;
     margin-bottom: 2em;
     
-    tr {
-        border-bottom: 1px solid $light-gray;
-    }    
+    // div {
+    //     border-bottom: 1px solid $light-gray;
+    // }    
     
-    thead tr {
-        color: $white;
-        background: $brand-purple;
-    }
+    // div {
+    //     color: $white;
+    //     background: $brand-purple;
+    // }
     
-    th, td {
-        padding: $table-padding;
-    }
+    // div {
+    //     padding: $table-padding;
+    // }
 
     .selected-row {
         background-color: $selected-row;

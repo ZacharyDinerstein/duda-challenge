@@ -3,12 +3,11 @@ import './Button.scss';
 
 const DeleteButton = props => {
     return (
-        <button
+        <i 
+            className="fas fa-trash-alt"
             onClick={props.handleDeleteRow}
-            className="btn btn-info btn-lg btn--delete"
-            disabled={props.showForm} >
-            Delete
-        </button>
+            disabled={props.showForm}
+        ></i>
     )
 }
 

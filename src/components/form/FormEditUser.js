@@ -7,8 +7,8 @@ export const formStates = { EDIT_STATE: 'edit-user', CREATE_STATE: 'create-user'
 const FormEditUser = props => {
   let { editedUserName, editedUserPass, formType } = props,
     formHeading = 'Edit User',
-    placeholderName = 'Edit Name',
-    placeholderPass = 'Edit Pass',
+    placeholderName = 'Edit name',
+    placeholderPass = 'Edit comment',
     showForm = props.showForm ? true : false,
     thisStateNameKeyWillUpdateOnChange = 'editedUserName',
     thisStatePassKeyWillUpdateOnChange = 'editedUserPass',
@@ -23,10 +23,7 @@ const FormEditUser = props => {
       <form
         onSubmit={formSubmitMedhod}
         className={showForm ? '' : 'hidden'} >
-        <h1>{formHeading}</h1>
-
         <div className="form-group">
-          <label htmlFor="">Name</label>
           <input
             type="text"
             className="form-control"
@@ -38,7 +35,6 @@ const FormEditUser = props => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="Password">Password</label>
           <input
             type="text"
             className="form-control"
@@ -48,7 +44,7 @@ const FormEditUser = props => {
             data-state_key_to_update={thisStatePassKeyWillUpdateOnChange}
             data-user_object_key_to_edit='pass' />
         </div>
-        <SubmitButton />
+        <SubmitButton text="Save"/>
       </form>
     </div>
   );

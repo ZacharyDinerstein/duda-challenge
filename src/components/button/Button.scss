@@ -41,3 +41,10 @@ button {
 .btn:disabled {
     opacity: .5;    
 }
+
+.fas {
+    margin-right: .5rem;
+    &:hover {
+        cursor: pointer;
+      }
+}

@@ -35,3 +35,11 @@ code {
   margin: 0 auto;
   margin-bottom: 2rem;
 }
+
+.img-container {
+  background-image: url("https://source.unsplash.com/random"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+}
